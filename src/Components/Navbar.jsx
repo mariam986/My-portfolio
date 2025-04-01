@@ -9,18 +9,20 @@ const Navbar = () => {
   return (
     <div className="fixed w-full pt-10 bg-current z-10  ">
       <div className="flex gap-36 md:justify-between px-5 md:px-40  ">
-        <h1 className="text-[40px] text-red-800 font-bold">
-          Port<span className="text-[24px] text-white">folio</span>
-        </h1>
-        <button
-          onClick={() => {
-            setOpen(true);
-            console.log("Hamburger clicked");
-          }}
-          className=" text-white focus:outline-none z-50 text-3xl md:hidden block ml-20 "
-        >
-          ☰
-        </button>
+        <div className="flex justify-between gap-52">
+          <h1 className="text-[40px] text-red-800 font-bold">
+            Port<span className="text-[24px] text-white">folio</span>
+          </h1>
+          <button
+            onClick={() => {
+              setOpen(true);
+              console.log("Hamburger clicked");
+            }}
+            className=" text-white focus:outline-none z-50 text-3xl md:hidden block  "
+          >
+            ☰
+          </button>
+        </div>
         <div className="text-red-800 md:flex space-x-10 text-[24px] list-none hidden  ">
           <li>
             <AnchorLink className="anchor-link" href="#home">

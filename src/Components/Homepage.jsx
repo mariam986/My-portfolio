@@ -18,14 +18,14 @@ const Homepage = () => {
   return (
     <section
       id="home"
-      className=" bg-[#d3d3d3]  md:bg-custom   md:h-screen  md:pt-20 w-[100%]     "
+      className=" bg-[#d3d3d3]  md:bg-custom   md:h-screen  md:pt-20 w-[100%] xl:pt-0    "
     >
       <div className="block md:flex ">
         <motion.div
           initial={{ opacity: 0, translateY: "-100%" }}
           whileInView={{ opacity: 1, translateY: "0" }}
           transition={{ duration: 3, ease: "easeIn" }}
-          className="pt-[15rem] pl-[1rem] md:pl-[10rem] w-[100%] md:w-[60%]"
+          className="pt-[15rem] md:pt-[10rem] pl-[1rem] md:pl-[10rem] w-[100%] md:w-[60%]"
         >
           <div>
             <h2 className="text-[28px] font-normal">Hello, my name is </h2>
@@ -68,7 +68,7 @@ const Homepage = () => {
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 3, ease: "easeIn" }}
-          className="pt-[3rem] md:pt-[15rem] ml-5 md:ml-0 "
+          className="pt-[3rem] md:pt-[10rem] ml-5 md:ml-0 "
         >
           <img
             src={pookie}
