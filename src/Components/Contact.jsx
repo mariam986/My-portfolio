@@ -7,13 +7,17 @@ import { useForm, ValidationError } from "@formspree/react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("mpwpjwee");
   const [message, setMessage] = useState();
-  const handleFormSubmit = (event) => {
+  const [loading, setLoading] = useState();
+  const handleFormSubmit = async (event) => {
+    setLoading(true);
     event.preventDefault();
-    handleSubmit(event);
+
+    const result = await handleSubmit(event);
 
     if (state.succeeded) {
       event.target.reset();
       setMessage("Form Submitted Successfully");
+      setLoading(false);
     } else {
       console.log("Error", state);
     }
@@ -86,7 +90,7 @@ const Contact = () => {
               className="rounded-full bg-red-800 py-4 px-14 mt-5 hover:scale-110 duration-300"
               type="submit"
             >
-              Submit
+              {loading ? "Sending message" : "Submit"}
             </button>
             <p className="mt-5 text-[20px] font-medium">{message}</p>
           </form>

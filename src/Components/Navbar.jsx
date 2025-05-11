@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
         {/* Hamburger nav */}
         <div
-          className={`text-red-800 block space-x-10 text-[24px] list-none md:hidden fixed top-0 left-0 w-[50%] z-50 h-full bg-black  transition-transform duration-300 ease-in-out space-y-8 ${
+          className={`text-red-800 block space-x-10 text-[24px] list-none md:hidden fixed top-0 left-0 w-[80%] z-50 h-full bg-black  transition-transform duration-300 ease-in-out space-y-8 ${
             open ? "-translate-y-0" : "-translate-y-full "
           }   `}
         >
@@ -98,6 +98,7 @@ const Navbar = () => {
                 onClick={() => {
                   console.log("home clicked");
                   setMenu("home");
+                  setOpen(false);
                 }}
                 className={`  cursor-pointer mt-10  ${
                   menu === "home" ? "text-white" : ""
@@ -113,6 +114,7 @@ const Navbar = () => {
                 onClick={() => {
                   console.log("skills clicked");
                   setMenu("skills");
+                  setOpen(false);
                 }}
                 className={`  cursor-pointer  ${
                   menu === "skills" ? "text-white" : ""
@@ -125,7 +127,10 @@ const Navbar = () => {
           <li>
             <AnchorLink className="anchor-link" href="#projects">
               <p
-                onClick={() => setMenu("projects")}
+                onClick={() => {
+                  setMenu("projects");
+                  setOpen(false);
+                }}
                 className={`  cursor-pointer  ${
                   menu === "projects" ? "text-white" : ""
                 }`}
@@ -138,7 +143,10 @@ const Navbar = () => {
           <li>
             <AnchorLink className="anchor-link" href="#contact">
               <p
-                onClick={() => setMenu("contact")}
+                onClick={() => {
+                  setMenu("contact");
+                  setOpen(false);
+                }}
                 className={`  cursor-pointer  ${
                   menu === "contact" ? "text-white" : ""
                 }`}

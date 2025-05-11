@@ -24,15 +24,19 @@ const Homepage = () => {
         <motion.div
           initial={{ opacity: 0, translateY: "-100%" }}
           whileInView={{ opacity: 1, translateY: "0" }}
-          transition={{ duration: 3, ease: "easeIn" }}
-          className="pt-[15rem] md:pt-[10rem] pl-[1rem] md:pl-[10rem] w-[100%] md:w-[60%]"
+          transition={{ duration: 1, ease: "easeIn" }}
+          className="pt-[10rem] lg:pt-[10rem] pl-[1rem] md:pl-[10rem] w-[100%] md:w-[60%]"
         >
           <div>
-            <h2 className="text-[28px] font-normal">Hello, my name is </h2>
-            <h1 className="text-[40px] font-bold mt-4">USMAN MARIAM</h1>
-            <h2 className="text-[28px] font-normal mt-4">
+            <h2 className="text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-normal">
+              Hello, my name is{" "}
+            </h2>
+            <h1 className="text-[28px] md:text-[30px] lg:text-[36px] xl:text-[40px] font-bold mt-4">
+              USMAN MARIAM
+            </h1>
+            <h2 className="text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-normal mt-4">
               I'm a{" "}
-              <span className="text-[40px] font-bold text-red-800 ">
+              <span className="text-[28px] md:text-[30px] lg:text-[36px] xl:text-[40px]  font-bold text-red-800 ">
                 {text}
               </span>
               <span className="text-red-800">
@@ -68,7 +72,7 @@ const Homepage = () => {
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 3, ease: "easeIn" }}
-          className="pt-[3rem] md:pt-[10rem] ml-5 md:ml-0 "
+          className="pt-[3rem] lg:pt-[10rem] ml-5 hidden lg:flex md:ml-0 "
         >
           <img
             src={pookie}

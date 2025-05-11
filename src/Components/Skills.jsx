@@ -5,6 +5,8 @@ import { FaReact } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa";
 import { FaJs } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { SiNextdotjs } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -15,6 +17,8 @@ const Skills = () => {
     { name: "Javascript", icon: FaJs, level: 75 },
     { name: "React JS", icon: FaReact, level: 80 },
     { name: "Tailwind CSS", icon: RiTailwindCssFill, level: 85 },
+    { name: "Next Js", icon: SiNextdotjs, level: 70 },
+    { name: "Typescript", icon: SiTypescript, level: 60 },
   ];
   const percentage = [
     { name: "creativity", level: 90 },
@@ -25,9 +29,9 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-[#d3d3d3] pt-20 px-[1rem] md:px-[10rem]   flex-col md:flex justify-between md:flex-row items-center"
+      className="bg-[#d3d3d3] pt-20    flex-col lg:flex justify-between lg:flex-row items-center"
     >
-      <div className="w-[80%] md:w-[45%]">
+      <div className="w-[80%] mx-auto lg:w-[45%]">
         <h1 className="text-[35px] font-semibold  underline text-center underline-offset-8">
           Techical Skills
         </h1>
@@ -51,7 +55,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-      <div className="w-[80%] md:w-[45%]">
+      <div className="w-[80%] mx-auto xl:w-[45%]">
         <h1 className="text-[35px] font-semibold  underline ml-6 mt-10 md:mt-0 md:ml-14 underline-offset-8">
           Professional Skills
         </h1>
@@ -60,8 +64,8 @@ const Skills = () => {
             <motion.div
               key={index}
               className="flex items-center flex-col w-[80%] md:w-[50%]"
-              initial={{ opacity: 0, translateX: "100%" }}
-              whileInView={{ opacity: 1, translateX: "0" }}
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
             >
               <div>
